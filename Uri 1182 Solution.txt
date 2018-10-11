@@ -1,0 +1,35 @@
+#include<stdio.h>
+int main()
+{
+    int i,j,n,s=0,m=0;
+    int a[2][2];
+    char x;
+    scanf("%d %c",&n,&x);
+    for(i=0; i<=1; i++)
+    {
+        for(j=0; j<=1; j++)
+        {
+            scanf("%d",&a[i][j]);
+            if(i<=1 && j==n )
+            {
+                if(x=='S')
+                {
+                    s=s+a[i][j];
+                }
+               else if(x=='M')
+                {
+                    m=((m+a[i][j])/2);
+                }
+            }
+        }
+    }
+    if(x=='S')
+    {
+        printf("%d\n",s);
+    }
+    if(x=='M')
+    {
+        printf("%d\n",m);
+    }
+    return 0;
+}
